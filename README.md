@@ -2,8 +2,10 @@ This is few python scripts that can be useful
 
 
 ### Webex-bot:
-Sends a message to webex room. As pre requisite, create the bot following the steps here:
-- Create a new Webex Space
+Sends a message to webex room. As pre requisite, create the bot following the steps below Create a Bot
+
+### Webex-bot-from-topic:
+Sends messages to webex room from kafka topic subscription. As pre requisite, create the bot following the steps below Create a Bot.
 
 ## Create a Bot
 - Go to: https://developer.webex.com/my-apps
