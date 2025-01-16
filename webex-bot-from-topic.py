@@ -1,7 +1,7 @@
 import requests
 from kafka import KafkaConsumer
 import json
-from config import WEBEX_API_TOKEN
+from config import *
 
 def send_message_to_webex(api_token, room_id, message):
     """
@@ -59,9 +59,9 @@ def consume_messages_and_send(api_token, room_id, kafka_server, kafka_topic):
 
 if __name__ == "__main__":
     api_token = WEBEX_API_TOKEN  # Retrieved from the config file
-    room_id = "Y2lzY29zcGFyazovL3VzL1JPT00vZDc4NmY5NTAtNzY5MC0xMWVmLWJkYzAtMDdhODkzNDViNDYz"
-    kafka_server = "10.48.170.41:9092"
-    kafka_topic = "Topic1"
+    room_id = ROOM_ID # Retrieved from the config file
+    kafka_server = KAFKA_SERVER
+    kafka_topic = TOPIC
 
     # Consume messages from Kafka and send to Webex
     consume_messages_and_send(api_token, room_id, kafka_server, kafka_topic)
